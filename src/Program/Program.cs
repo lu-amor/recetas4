@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Full_GRASP_And_SOLID
 {
@@ -22,8 +23,8 @@ namespace Full_GRASP_And_SOLID
 
             Recipe recipe = new Recipe();
             recipe.FinalProduct = GetProduct("Café con leche");
-            recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
-            recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
+            recipe.AddStep(productCatalog[0], 100, equipmentCatalog[0], 120);
+            recipe.AddStep(productCatalog[1], 200, equipmentCatalog[1], 60);
 
             IPrinter printer;
             printer = new ConsolePrinter();

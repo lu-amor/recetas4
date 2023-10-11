@@ -4,6 +4,8 @@
 // </copyright>
 //-------------------------------------------------------------------------------
 
+using System.Runtime.CompilerServices;
+
 namespace Full_GRASP_And_SOLID
 {
     public class Step
